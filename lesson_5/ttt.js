@@ -144,6 +144,8 @@ class Computer extends Player {
     }
 }
 
+
+
 class TTTGame {
 
     static POSSIBLE_WINNING_ROWS = [
@@ -222,13 +224,30 @@ class TTTGame {
       });
     }
     
+    joinOr(array, separator = ', ', lastJoin = 'or') {
+      if (array.length === 1) {
+        return array[0];
+      }
+      else if (array.length === 2) {
+        return array[0] + ' ' + lastJoin + ' ' + array[1];
+      }
+      else {
+    
+        let beforeLast = array.slice(0, array.length - 1);
+        let resultingString = beforeLast.join(separator) + separator + lastJoin + ' ' + array[array.length - 1];
+      
+        return resultingString;
+      }
+    
+    }
+
     humanMoves() {
       let choice;
 
 
       while (true) {
         let validChoices = this.board.unusedSquares();
-        const prompt = `Choose a square (${validChoices.join(", ")}): `;
+        const prompt = `Choose a square (${this.joinOr(validChoices)}): `;
         choice = readline.question(prompt);
   
         if (validChoices.includes(choice)) break;
