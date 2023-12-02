@@ -1,6 +1,14 @@
 let readline = require('readline-sync')
 
+
+
 class Card {
+  static SPECIAL = {
+    'Jack' : 10,
+    'Queen': 10,
+    'King' : 10,
+    'Ace' : 11
+  }
     constructor(suit, rank) {
       //STUB
       // What sort of state does a card need?
@@ -11,6 +19,14 @@ class Card {
 
     display() {
         return `${this.rank} of ${this.suit}`
+    }
+
+    getRankValue() {
+      if (!Object.keys(Card.SPECIAL).includes(this.rank)) {
+        return this.rank;
+      } else{
+        return Card.SPECIAL(this.rank);
+      }
     }
   }
   
@@ -76,9 +92,17 @@ class Card {
     }
 
     showCards() {
-      this.cards.forEach(card => card.display())
+      this.cards.forEach(card => console.log(card.display()))
     }
+
+    isBusted() {
+      let sum = 0;
+      this.cards.forEach(card => sum += card.getRankValue());
+      if (sum > 21) {return true;}
+      return false;
+      
   }
+}
   
   class Player extends Participant {
     constructor() {
@@ -135,8 +159,9 @@ class Card {
       //STUB
     }
   
-    reveal() {
-      //STUB
+    showCards() {
+      console.log(this.cards[0].display());
+      console.log('Other hidden');
     }
   
     deal() {
@@ -180,11 +205,32 @@ class Card {
   
     showCards() {
       //STUB
+      console.log();
+      console.log('Players cards: ');
+      this.player.showCards();
+      console.log();
+      console.log('Dealer cards: ');
+      this.dealer.showCards()
 
     }
   
     playerTurn() {
       //STUB
+      let move = readline.question('Do you want to Hit(H) or Stay(S)? ');
+      
+      // Add validation for move
+
+      while (move === 'H') {
+        this.player.addCard(this.deck.deal());
+        console.log(this.player);
+        if (this.player.isBusted()) {
+          break;
+        }
+        move = readline.question('Do you want to Hit(H) or Stay(S)? ')
+      }
+
+
+
     }
   
     dealerTurn() {
