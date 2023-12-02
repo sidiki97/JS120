@@ -9,9 +9,9 @@ class Card {
       this.rank = rank;
     }
 
-    // toString() {
-    //     return `${this.rank} of ${this.suit}`
-    // }
+    display() {
+        return `${this.rank} of ${this.suit}`
+    }
   }
   
   class Deck {
@@ -37,7 +37,7 @@ class Card {
     deal() {
       //STUB
       // does the dealer or the deck deal?
-      console.log(Object.keys(this.deck));
+
       let randomSuit = Object.keys(this.deck)[Math.floor(Math.random() * Object.keys(this.deck).length)];
       let randomRank = Math.floor(Math.random() * this.deck[randomSuit].length);
 
@@ -68,6 +68,15 @@ class Card {
       // What sort of state does a participant need?
       // Score? Hand? Amount of money available?
       // What else goes here? all the redundant behaviors from Player and Dealer?
+      this.cards = [];
+    }
+
+    addCard(card) {
+      this.cards.push(card);
+    }
+
+    showCards() {
+      this.cards.forEach(card => card.display())
     }
   }
   
@@ -144,18 +153,13 @@ class Card {
       this.deck = new Deck();
       this.player = new Player();
       this.dealer = new Dealer();
+
     }
   
     start() {
       //SPIKE
       this.displayWelcomeMessage();
-      while (true) {
-        this.dealCards();
-        let go = readline.question('Keep going:');
-        if (go === 'n') {
-            break;
-        }
-      }
+      this.dealCards();
       
       this.showCards();
       this.playerTurn();
@@ -166,12 +170,17 @@ class Card {
   
     dealCards() {
       //STUB
-      let card = this.deck.deal();
-      console.log(card);
+
+      for (let i = 0; i < 2; i += 1) {
+        this.player.addCard(this.deck.deal());
+        this.dealer.addCard(this.deck.deal());
+      }
+
     }
   
     showCards() {
       //STUB
+
     }
   
     playerTurn() {
