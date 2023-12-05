@@ -47,13 +47,7 @@ class Card {
 
     }
 
-    // TEST:
-    dealAce() {
-      let randomSuit = Object.keys(this.deck)[Math.floor(Math.random() * Object.keys(this.deck).length)];
-      let card = new Card(randomSuit, 'Ace');
-      this.deck[randomSuit].splice(Deck.RANKS.length - 1, 1);
-      return card;
-    }
+    
   
     deal() {
 
@@ -71,12 +65,6 @@ class Card {
       if (this.deck[randomSuit].length === 0) {
         delete this.deck[randomSuit];
       } 
-      /*
-
-      TODO:
-      Handle empty deck
-
-      */
       
       return card;
     }
@@ -119,6 +107,10 @@ class Card {
       return this.sum;
     }
 
+    // bustCheck(sum) {
+    //   if (sum > 21) {this.busted = true};
+    // }
+
     sumCalc(sum) {
       this.cards.forEach(card => sum += card.getRankValue());
       
@@ -131,6 +123,9 @@ class Card {
           i += 1;
         } while (sum > 21 && i < this.cards.length);
       }
+
+      // this.bustCheck(sum);
+
       return sum;
     }
 
@@ -247,7 +242,6 @@ class Dealer extends Participant{
 
     dealCards() {
 
-      console.log(this.deck);
       for (let i = 0; i < 2; i += 1) {
         this.player.addCard(this.deck.deal());
         this.dealer.addCard(this.deck.deal());
@@ -264,12 +258,28 @@ class Dealer extends Participant{
       this.dealer.initialShowCards()
 
     }
+
+    static validMove(move = '') {
+      while (!"HS".includes(move)) {
+        console.log();
+        move = readline.question('That is not a valid move.  Please input either H or S: ')
+      }
+
+      return move;
+    }
   
     playerTurn() {
       console.log();
+
+      console.log(`Player's Total Points: ${this.player.getSumWhileHitting()}`);
+      
+      console.log();
+      
       let move = readline.question('Do you want to Hit(H) or Stay(S)? ');
       
       // Add validation for move
+
+      move = TwentyOneGame.validMove(move);
 
       while (move === 'H') {
 
@@ -280,7 +290,9 @@ class Dealer extends Participant{
 
         console.log('Players cards: ');
         this.player.showCards();
-
+        console.log();
+        console.log(`Player's Total Points: ${this.player.getSumWhileHitting()}`);
+        console.log();
         if (this.player.isBusted()) {
           console.log('BUSTED')
           break;
@@ -288,11 +300,12 @@ class Dealer extends Participant{
 
         console.log();
         move = readline.question('Do you want to Hit(H) or Stay(S)? ')
+        move = TwentyOneGame.validMove(move);
       }
 
       this.player.setSum();
 
-      console.log(this.player.getSum());
+      console.log(`Player's Total Points:${this.player.getSum()}`);
       
 
     }
@@ -305,6 +318,8 @@ class Dealer extends Participant{
 
         this.dealer.showCards();
         let sum = this.dealer.getSumWhileHitting();
+        console.log();
+        console.log(`Dealer Point Total: ${sum}`);
   
         console.log();
   
@@ -317,11 +332,14 @@ class Dealer extends Participant{
             console.log("Dealer Busted!")
             break;
           }
+
+
           sum = this.dealer.getSumWhileHitting();
+          console.log(`Dealer Point Total: ${sum}`);
         }
         this.dealer.setSum();
   
-        console.log(this.dealer.getSum());
+        
       }
       
     }
@@ -335,12 +353,18 @@ class Dealer extends Participant{
     }
 
     dealerWon() {
+      console.log();
       console.log("Dealer won the game.");
+      console.log(`Dealer Point Total: ${this.dealer.getSum()}`);
+      console.log(`Player's Total Points:${this.player.getSum()}`);
       this.player.deduct();
     }
 
     playerWon() {
+      console.log();
       console.log("Player won the game!");
+      console.log(`Player's Total Points:${this.player.getSum()}`);
+      console.log(`Dealer Point Total: ${this.dealer.getSum()}`);
       this.player.add();
     }
   
@@ -354,6 +378,7 @@ class Dealer extends Participant{
       } else if (this.dealer.getSum() < this.player.getSum()) {
         this.playerWon();
       } else {
+        console.log();
         console.log("It's a tie. ;)")
       }
     }
