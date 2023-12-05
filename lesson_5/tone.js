@@ -224,7 +224,7 @@ class Dealer extends Participant{
         console.log(`Current money: $ ${this.player.getMoney()}`)
         if (this.player.alertMaxMoney() || this.player.alertMinMoney()) break;
 
-        let again = readline.question('Would you like to play again? ');
+        let again = readline.question('Would you like to play again (y/n)? ');
         if (again === 'n') break;
 
         this.refreshPlayerHands();
@@ -259,7 +259,7 @@ class Dealer extends Participant{
 
     }
 
-    static validMove(move = '') {
+    static validMove(move) {
       while (!"HS".includes(move)) {
         console.log();
         move = readline.question('That is not a valid move.  Please input either H or S: ')
