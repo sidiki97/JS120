@@ -1,4 +1,4 @@
-let readline = require('readline-sync')
+const readline = require('readline-sync')
 
 
 
@@ -224,10 +224,11 @@ class Dealer extends Participant{
         console.log(`Current money: $ ${this.player.getMoney()}`)
         if (this.player.alertMaxMoney() || this.player.alertMinMoney()) break;
 
-        let again = readline.question('Would you like to play again (y/n)? ');
+        let again = readline.question('Would you like to play again? \n1) Press Enter to keep going.\n2) Press n to quit.\nDecision: ');
         if (again === 'n') break;
 
         this.refreshPlayerHands();
+        console.clear();
         
       }
 
@@ -260,7 +261,7 @@ class Dealer extends Participant{
     }
 
     static validMove(move) {
-      while (!"HS".includes(move)) {
+      while (!["H", "S"].includes(move)) {
         console.log();
         move = readline.question('That is not a valid move.  Please input either H or S: ')
       }

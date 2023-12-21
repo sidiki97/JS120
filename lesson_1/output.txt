@@ -1,0 +1,389 @@
+Localized Case Cause of Death
+Crosslink Source Event
+Localized Case Contact
+Vault File Manager User
+Localized Case Drug History
+Localized Case Product Dosage
+Binder Section Metadata
+Tag Security Impact Analysis Processor
+Admin Link
+Query Function Event Handler
+Query Function
+Rendition Type
+Componentdirectoryeventhandler
+Product Substance
+Inbox Item
+Localized Case Product
+Admin Section
+Admin Setting Trigger
+Substance
+Localized Case Medical History
+Message Processor
+Queue
+Inbound Package Step
+Localized Case Test Result
+MedDRA
+Localized Case Product Substance
+Localized Case Product Indication
+Matching Contents
+Vault Component Relationship
+User Role Constraint
+Formatted Output Template
+Field Rule
+Record Workflow Action
+Integration Rule
+Document Lifecycle Stage
+Permalink
+Case Assessment Expectedness
+Object Lifecycle Stage
+Document Lifecycle Stage Group
+Channel Usage
+Object Lifecycle Stage Group
+User Role
+Distribution Jurisdiction
+Datasheet
+Source
+Signal Product Profile
+Signal Product Profile Identifier
+Record Visibility Tag Rule
+E2B Import Extension
+Record Visibility Tag Handler
+Product-Event
+Aggregate Report Template
+Localized Substance
+Case Product Registration
+Record Role Trigger
+Product Family Product
+Localized Case Comment
+Aggregate Report Template Item
+Product Family Substance
+Product Variant
+Signal Product Profile Substance
+Mobile Share Media
+Signal Product Profile Product
+Inbound Email Address
+Safety Setting
+Application Context Selector
+Email Processor
+Outbound Package
+User Team Assignment
+Signal Alert Rule Set
+Signal Alert Rule
+Case Volume Metrics
+Rendition Profile
+Signal Alert
+Case User Assignment Activity
+Literature Author
+Agency Unit of Measurement
+EDQM
+Batch
+Signal Alert Rule Set Product Profile
+Literature Additional Info
+Report
+User Assignment Attributes
+Signal Alert Rule Set Source
+Searchable Field
+Control
+Mobile Share Action
+Page
+Share Action
+Pagelayout
+Query Object Rule
+Record Trigger
+Vault Component
+Product-Event Case Version
+Checklist Matching Field
+Checklist Type
+Inbound Package Data
+Application License Model Field
+Application License Model
+Safety Validation Rule
+Safety Reporting Rule
+Document Panel Controller Code
+Vault Token
+Pre Upgrade Task
+object_type__v
+VeevaID invite: Vault User Creation
+Application Security Rule
+Application Provisioner
+Application Security Field
+Dataset
+Application Security Assignment
+Inbound Package
+Performance Statistics
+Action
+Locale
+Trained Model Performance Metric
+Inactive Ingredient Registration
+Trained Model
+Inactive Ingredient
+Prediction
+Scheduled Data Export
+Product Family
+Share Inbox Document
+Prediction Metric
+MedDRA Query Building Block
+Mobile Tab
+Connection Allowed List
+E2B Extension
+Admin Section Controller Code
+Datasheet MedDRA Query
+Watchlist MedDRA Query
+Safety Migration Configuration
+Dataset Item
+Signal EVDAS eRMR
+Signal Product Reporting Period
+Case Drug History Substance
+Signal EVDAS eRMR Link
+Glossary Event
+Glossary Definition
+Package Component
+Localized Case Product Device Code
+Dictionary Bulk Action
+Activity
+Case Product Device Code
+IMDRF Device Code
+List Layout
+List Layout Item
+Application Manifest
+Enabled Component
+Cloning Rule
+Upgrade Task
+Feature Flag
+Cache Type
+Localized Case Translation
+Language (ISO)
+Case Drug History
+EDL Item
+Workflow
+Automation Task
+Inbound Package Component
+Case Medical History
+Record Role Assignments Handler
+Record Action Configuration
+Case Cause of Death
+Component Property Set
+Performance Statistic
+Expression Factory
+Component Admin UI
+Html Document Handler
+User Task
+Component Property
+Case Test Result
+Signal Case Sync Log
+PSMF Logbook
+Case Identifier
+Case Contact
+Language Locale
+Envelope
+Source Sponsor
+PSMF Logbook Entry
+Object Class Trigger
+Component Record Handler
+EDL Template
+Case Study Registration
+Document Usage
+Case Assessment Result
+Case Relationship
+Case Diagnosis
+Case Assessment
+Unit of Measurement
+Document Type Detail
+Case Product Substance
+Tab Collection Item
+Case Adverse Event
+Case Product Dosage
+Security Profile
+Case Product Indication
+Case Product
+Permission Set
+Role Permissionset
+Tab Collection
+Claim Targets
+Message Delivery Event Handler
+Claim
+Link Target
+Legal Hold
+Record Visibility Rule
+Record Role Override
+Envelope Content
+Case
+Study Site
+Transmission
+Case Number
+Email
+Localized Case Document
+Emailed Document
+EDL Item Template
+Office Edit Version
+Tracked Notification Event Handler
+Report Excel Template
+User Defined Service
+Form Validator Code
+Performance Statistic Sensor
+Search Collection
+Document Type Trigger
+Search Collection Section
+Rendition Profile
+Document Lifecycle Atomic Security For Actions
+Document Type Group Detail
+Page Controller Code
+Signal Investigation MedDRA Query
+Product-Event Combination
+Signal Investigation
+Localized Study Arm
+Safety Investigation Reporting Period
+DataLake Transfer Log
+Signal Source
+Signal Investigation Product-Event
+Document Action
+MedDRA Synonym
+Safety Investigation
+Suppressed Email Address
+Componentsecurity
+MedDRA Synonym Context
+Excluded Classification
+Product-Event Disposition
+Match Text Variation
+Componentattributepermission
+WebApi
+Lifecycle State Type
+Lifecycle State Type Association
+User
+Application Family License Model
+Person
+Case Signature
+Application User License Type
+Literature Search Term
+PVA Relationship
+Literature Review
+Literature Article
+Application User License Model
+User defined model
+PDF Merge Result Handler
+Document Panel
+Literature Database
+Inbound Package Code
+PVA-Study
+Email Destination
+Transmission System Log
+VeevaId User Registration Event Handler
+PVA-Country
+Study Product Placeholder
+PV Agreement Signature
+Study Arm
+PVA-Product
+Sub-Checklist Design
+PV Agreement
+SdkJob
+Job Metadata
+Checklist Design Master
+Message
+Layout Nesting Type
+Message Group
+Dependency
+Local Reporting Details
+Security Policy
+External Url
+Connection Authorization
+PVA Reconciliation
+User Access Group Assignment
+Inbox Item Control
+MedDRA (Localized)
+PVA Obligation
+PVA Activity
+Substance Alias
+Validation Result
+PVA Contact
+Route of Administration
+Available Answer
+Study Product Substance
+Dependency Design
+Available Answer Design
+Response
+Study Registration
+Question Design
+Signature Page
+User Account Email
+Overlay Override
+EDL
+PVA Action Item
+Reporting Group Study Registration
+Document Prediction Action
+UI Widget Attribute
+Public Access Link Code
+Library Question Reference Document
+Dose Form
+Transmission Signature
+Aggregate Reporting Group
+Object Control
+User defined class
+Package Dataset
+Study
+Overlay Template
+Study Product Group
+Aggregate Report
+MedDRA Version
+Library Question
+Inbox Item Translation
+Transmission Message
+Study Arm Product
+Localized Case Adverse Event
+Legal Hold Item
+Study Person
+Reporting Family
+Answer Library Design
+Localized Case Assessment
+Local Reporting Details/Product Join
+Sequential Number
+Section Design
+Localized Case Assessment Result
+Reporting Family Member
+Object Control Code
+Localized Case Identifier
+Section
+Component Admin UI Action
+Document Lifecycle State-Stage
+License Event Handler
+Object Lifecycle State-Stage
+Aggregate Report Case
+Checklist Design
+Localized Case
+Document Lifecycle Stage Label
+User Role Setup
+Checklist
+Product Registration
+Control Code
+Object Lifecycle Stage Label
+Tab Group
+Document Lifecycle Atomic Security For Workflow Actions
+Case Narrative Integration Exception
+PSMF Document Review
+Case Narrative Json
+CDN Distribution Status
+Document Lifecycle Atomic Security
+PSMF Periodic Review
+Media
+Case Narrative Template
+Case Narrative Update
+Case Narrative Rule
+Study Indication
+Language
+Checklisteventhandler
+Notification Type
+Study Product
+Public Access Link Type Function
+Localized Study
+Literature Abstract Translation
+Signal Report
+Holiday
+UI Widget
+Aggregate Report Destination
+MedDRA Join
+Aggregate Report Task
+Question Design Reference Document
+Reporting Group Product Registration
+Public Access Link Type
+Document Training Action
+Holiday Schedule
+Public Access Link Function
